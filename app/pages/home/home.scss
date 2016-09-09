@@ -1,0 +1,19 @@
+.home-page{
+	.homePage {
+	  background-image: url('../../img/cover.jpg');
+	  background-repeat: no-repeat;
+		background-size:cover;
+	}
+    ion-label {
+        color: #222;
+        margin-left: 10px
+    }
+    ion-item {
+        color: #222;
+        padding: 10px;
+        background-color: #fff;
+    }
+    .button-round {
+	  padding: 2.5rem 2.6rem;
+	}
+}

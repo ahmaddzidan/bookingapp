@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar primary>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BookingMu Demo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="homePage">
+
+    	<ion-list no-lines>
+
+		  	<ion-item>
+	            <ion-label><ion-icon name="key"></ion-icon> Room Type</ion-label>
+	            <ion-select [(ngModel)]="roomType">
+	                <ion-option value="standard">Standard</ion-option>
+	                <ion-option value="studio">Studio</ion-option>
+	                <ion-option value="villa">Villa</ion-option>
+	                <ion-option value="penthouse">Penthouse</ion-option>
+	            </ion-select>
+	        </ion-item>
+
+	        <ion-item>
+	            <ion-label><ion-icon name="people"></ion-icon> Duration</ion-label>
+	            <ion-select [(ngModel)]="nights">
+	                <ion-option value="1">1 Night</ion-option>
+	                <ion-option value="2">2 Nights</ion-option>
+	                <ion-option value="3">3 Nights</ion-option>
+	                <ion-option value="4">4 Nights</ion-option>
+	                <ion-option value="5">5 Nights</ion-option>
+	                <ion-option value="6">6 Nights</ion-option>
+	            </ion-select>
+	        </ion-item>
+
+	        <ion-item>
+	            <ion-label><ion-icon name="people"></ion-icon> No. of Room</ion-label>
+	            <ion-select [(ngModel)]="rooms">
+	                <ion-option value="1">1 Room</ion-option>
+	                <ion-option value="2">2 Rooms</ion-option>
+	                <ion-option value="3">3 Rooms</ion-option>
+	                <ion-option value="4">4 Rooms</ion-option>
+	                <ion-option value="5">5 Rooms</ion-option>
+	                <ion-option value="6">6 Rooms</ion-option>
+	                <ion-option value="7">7 Rooms</ion-option>
+	                <ion-option value="8">8 Rooms</ion-option>
+	            </ion-select>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="clock"></ion-icon> Check in:</ion-label>
+	          <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="from"></ion-datetime>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label><ion-icon name="alarm"></ion-icon> Check out:</ion-label>
+	          <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="to"></ion-datetime>
+	        </ion-item>
+
+	    </ion-list>
+
+    <button (click)="findRooms()" primary block round>Find Rooms</button>
+
+</ion-content>
